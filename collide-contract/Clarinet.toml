@@ -1,10 +1,15 @@
-
+[project]
 name = 'collide-contract'
 description = ''
 authors = []
 telemetry = true
 cache_dir = '.\.cache'
 requirements = []
+[contracts.mintandburn]
+path = 'contracts/mintandburn.clar'
+clarity_version = 3
+epoch = 3.0
+
 [contracts.tnx-token]
 path = 'contracts/tnx-token.clar'
 clarity_version = 3
