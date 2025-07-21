@@ -5,6 +5,11 @@ authors = []
 telemetry = true
 cache_dir = '.\.cache'
 requirements = []
+[contracts.liquidity-pool]
+path = 'contracts/liquidity-pool.clar'
+clarity_version = 3
+epoch = 3.0
+
 [contracts.mintandburn]
 path = 'contracts/mintandburn.clar'
 clarity_version = 3
