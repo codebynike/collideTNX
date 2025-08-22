@@ -38,21 +38,15 @@
 
 ;; SIP-010 Functions
 
-;; Transfer tokens to a specified principal
 (define-public (transfer (amount uint) (sender principal) (recipient principal) (memo (optional (buff 34))))
     (begin
         (asserts! (is-eq tx-sender sender) err-not-authorized)
         (asserts! (> amount u0) err-invalid-amount)
         (asserts! (<= amount (ft-get-balance tnx sender)) err-insufficient-balance)
         (try! (ft-transfer? tnx amount sender recipient))
-        (match memo
-            memo-data (print memo-data)
-            none true
-        )
+        
         (ok true)
-    )
-)
-
+    ))
 ;; Get the token name
 (define-read-only (get-name)
     (ok "TNX Token")
@@ -120,3 +114,4 @@
         (ok (ft-mint? tnx amount player))
     )
 )
+
