@@ -5,6 +5,16 @@ authors = []
 telemetry = true
 cache_dir = '.\.cache'
 requirements = []
+[contracts.NFT-marketplace]
+path = 'contracts/NFT-marketplace.clar'
+clarity_version = 3
+epoch = 3.0
+
+[contracts.game-nft]
+path = 'contracts/game-nft.clar'
+clarity_version = 3
+epoch = 3.0
+
 [contracts.liquidity-pool]
 path = 'contracts/liquidity-pool.clar'
 clarity_version = 3

@@ -45,10 +45,6 @@
         (asserts! (> amount u0) err-invalid-amount)
         (asserts! (<= amount (ft-get-balance tnx sender)) err-insufficient-balance)
         (try! (ft-transfer? tnx amount sender recipient))
-        (match memo
-            memo-data (print memo-data)
-            none true
-        )
         (ok true)
     )
 )
